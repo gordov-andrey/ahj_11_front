@@ -41,7 +41,7 @@ const messageContainer = document.querySelector('div.incoming-massages');
 
 const unread$ = interval(3000).pipe(
   concatMap(
-    () => from(ajax.getJSON('https://lap-heroku-rxjs.herokuapp.com/messages/unread'))
+    () => from(ajax.getJSON('https://gordov-ahj-11.herokuapp.com/messages/unread'))
       .pipe(catchError(() => of({ messages: [] }))),
   ),
   pluck('messages'),
